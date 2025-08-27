@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Redirecting...</title>
+  <script>
+    window.onload = () => {
+      const loggedIn = localStorage.getItem("loggedIn");
+      const loginTime = localStorage.getItem("lastLoginTime");
+      const now = Date.now();
+
+      if (loggedIn === "true" && loginTime && now - loginTime < 5 * 60 * 1000) {
+        // ৫ মিনিটের মধ্যে লগইন করা আছে, অনুমতি দিন
+        window.location.href = "https://drive.google.com/drive/folders/1w3dr7tYz2Cd8va5oQYQALw7JOSTf5_bH";
+      } else {
+        // অনুমতি নেই, Access Denied পেজে পাঠান
+        window.location.href = "access-denied.html";
+      }
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
