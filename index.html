@@ -28,8 +28,8 @@
       padding: 40px 30px;
       border-radius: 10px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      max-width: 350px;
-      width: 100%;
+      max-width: 300px;
+      width: 75%;
       text-align: center;
     }
 
@@ -39,7 +39,7 @@
     }
 
     input {
-      width: 100%;
+      width: 85%;
       padding: 12px 15px;
       margin-bottom: 20px;
       border: 1px solid #ccc;
@@ -95,13 +95,13 @@
 </head>
 <body>
   <div class="login-container">
-    <h2>MY DETELS</h2>
+    <h2>MY INFO ☺️</h2>
 
     <input type="email" id="email" placeholder="ইমেইল লিখুন" />
     <input type="password" id="password" placeholder="পাসওয়ার্ড লিখুন" />
     <button onclick="login()">লগইন</button>
 
-    <div class="footer-text">YOU ARE NOT ALAW</div>
+    <div class="footer-text">YOU ARE NOT ALAW THIS SITE</div>
   </div>
 
   <script>
@@ -133,14 +133,14 @@
       passField.classList.remove("error", "shake");
 
       if (!email || !password) {
-        alert("Please enter both email and password.");
+        alert("PLEEZ ENTER YOUR SICRET EMAIL & PASSWORD !!!");
         return;
       }
 
       auth
         .signInWithEmailAndPassword(email, password)
         .then(() => {
-          alert("Login successful. Redirecting...");
+          alert("Login successful. Loading your info...");
           // এখানে এই লাইনটি পরিবর্তন হলো:
           window.location.href = "redirect.html";
 
